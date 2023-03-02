@@ -9,8 +9,11 @@ class DBQueryTest(unittest.TestCase):
 		sql.cursor = MagicMock()
 		sql.cnx = MagicMock()
 		
-		self.assertEqual()
-
+		sql.cursor.execute.return_value = None
+		
+		sentences = sql.cursor()
+		
+		self.assertEqual(sentences)
 
 if __name__ == '__main__':
     unittest.main()
